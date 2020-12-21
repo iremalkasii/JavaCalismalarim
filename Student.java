@@ -3,28 +3,32 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ders1;
+package accessmodifiers;
 
-/**
- *
- * @author lenovo
- */
+
 public class Student {
-    String name;
-   int midterm;
-   int finalExam;
-   int id;
+ 
+     public int id;
+     public String name;
+     public float  midterm;
+     public float finalExam ;
     
-   float calculate(){
-        return midterm*0.4f +finalExam*0.6f;
-       
-       
-   }   
-   
-   void showAllInfo(){
-       System.out.println(name + "  "+ " " + " " +id + " "+ calculate());
-   }
-   
-   
-    
+
+public Student(){
+         System.out.println("hello from constructor");
+         
+     }
+      
+     public Student( String name,float midterm,float finalExam){
+         
+         this.name=name;
+         this.midterm=midterm;
+         this.finalExam=finalExam;
+         
+     }
+     public float getResult(){
+         return midterm*0.4f +finalExam*0.6f;
+     }
 }
+     
+     
